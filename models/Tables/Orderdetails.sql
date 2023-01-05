@@ -1,0 +1,12 @@
+with orders as (
+select
+DISCOUNT, 
+PRODUCTID, 
+QUANTITY, 
+ORDERID, 
+COS as cost, 
+SALES
+from PC_FIVETRAN_DB.SQL_SERVER_DBO.ORDERDETAILS
+where _FIVETRAN_DELETED= 'FALSE')
+
+select * from orders
